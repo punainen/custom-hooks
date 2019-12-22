@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-
+import React, { useState } from 'react'
+import { useResource } from './hooks'
 
 const useField = (type) => {
   const [value, setValue] = useState('')
@@ -14,24 +13,6 @@ const useField = (type) => {
     value,
     onChange
   }
-}
-
-const useResource = (baseUrl) => {
-  const [resources, setResources] = useState([])
-
-  // ...
-
-  const create = (resource) => {
-    // ...
-  }
-
-  const service = {
-    create
-  }
-
-  return [
-    resources, service
-  ]
 }
 
 const App = () => {
